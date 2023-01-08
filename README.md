@@ -7,19 +7,19 @@ https://next-learn-malred.vercel.app/
 
 ## 如 目录结构如下
 
-pages/
-  -- index.js
-  -- user.js
-  test/
-    -- index.js
-    -- learn.js
+pages/  
+  -- index.js  
+  -- user.js  
+  test/  
+    -- index.js  
+    -- learn.js  
 
 ## 对应url
 
-/ -> index.js
-/user -> user.js
-/test -> test/index.js
-/test/learn -> test/learn.js
+/ -> index.js  
+/user -> user.js  
+/test -> test/index.js  
+/test/learn -> test/learn.js  
 
 # 生产环境(需要先build)
 npm run start
