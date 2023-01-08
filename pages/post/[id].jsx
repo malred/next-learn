@@ -14,23 +14,16 @@ export default function Post({data}) {
 }
 
 // 返回用户可以访问的所有路由参数
-export async function getStaticPaths() {
-    // 自己加的,获取所有可获得的id
-    let result = await fetch('http://localhost:9090/ids', {
-        method: 'get',
-    })
-    let res = await result.json() //必须通过此方法才可返回数据
+export async function getStaticPaths() { 
     return {
         // 可以访问id=1和2的数据
-        // paths: [{params: {id: "1"}}, {params: {id: "2"}}],
-        paths: res,
+        paths: [{params: {id: "1"}}, {params: {id: "2"}}], 
         fallback: true
     }
 }
 
 // 返回路由参数对应的具体数据
-export async function getStaticProps({params}) {
-    /*
+export async function getStaticProps({params}) { 
         switch (id) {
             case "1":
                 data = {id: "1", title: 'hello'}
@@ -40,15 +33,7 @@ export async function getStaticProps({params}) {
                 break;
             default:
                 data = {}
-        }*/
-    // 自己加的,根据id获取数据
-    const id = params.id;
-    let result = await fetch(`http://localhost:9090/test/${id}`, {
-        method: 'get',
-    })
-    let res = await result.json() //必须通过此方法才可返回数据
-    // console.log(res)
-    if (id === '3') res = {id: '3', title: 'hello world'}
+        }*/ 
     return {
         props: {data: res}
     }
