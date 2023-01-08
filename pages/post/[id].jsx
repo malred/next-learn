@@ -24,6 +24,8 @@ export async function getStaticPaths() {
 
 // 返回路由参数对应的具体数据
 export async function getStaticProps({params}) { 
+    let id=params.id
+    let data
         switch (id) {
             case "1":
                 data = {id: "1", title: 'hello'}
