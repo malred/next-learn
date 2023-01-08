@@ -8,11 +8,11 @@ https://next-learn-malred.vercel.app/
 ## 如 目录结构如下
 
 pages/  
-  -- index.js  
-  -- user.js  
+  - index.js  
+  - user.js  
   test/  
-    -- index.js  
-    -- learn.js  
+    - index.js  
+    - learn.js  
 
 ## 对应url
 
